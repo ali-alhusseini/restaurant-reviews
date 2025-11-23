@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Add Review</title>
+</head>
+<body>
+    <header>
+        <h1>Add a Review</h1>
+        <p><a href="home_page.html">← Back to home</a></p>
+    </header>
+    <main class="review-page">
+        <p>Use this form to add a reviwe for a restaurant.</p>
+        <form action="https://wp.zybooks.com/form-viewer.php" method="get" target="_blank">
+            <label for="restaurant">Restaurant:</label>
+            <input id="restaurant" name="restaurant" type="text" required>
+            <br>
+
+            <label for="reviewer">Your name:</label>
+            <input id="reviewer" name="reviewer" type="text" required>
+            <br>
+
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email">
+            <br>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+            </select>
+            <br>
+
+            <label for="date">Date:</label>
+            <input id="date" name="date" type="date" required>
+            <br>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" required></textarea>
+            <br>
+
+            <button type="submit">Submit to zyBook form-viewer</button>
+        </form>
+    </main>
+    <footer>
+        <p>Ali Alhusseini — &copy; 2025 Restaurant Reviews</p>
+    </footer>
+</body>
+</html>
