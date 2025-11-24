@@ -134,12 +134,27 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const ad = document.getElementById('slideAd');
-            setTimeout(() => ad.classList.add('show'), 300);
-            const close = document.getElementById('adClose');
-            close.addEventListener('click', () => ad.classList.remove('show'));
-        });
+    document.addEventListener('DOMContentLoaded', function () {
+        const ad = document.getElementById('slideAd');
+        const close = document.getElementById('adClose');
+        let autoHideTimer;
+        setTimeout(() => {
+            ad.classList.add('show');
+            ad.setAttribute('aria-hidden', 'false');
+            autoHideTimer = setTimeout(hideAd, 4000);
+        }, 100);
+
+        function hideAd() {
+            ad.classList.remove('show');
+            ad.setAttribute('aria-hidden', 'true');
+            if (autoHideTimer) {
+                clearTimeout(autoHideTimer);
+                autoHideTimer = null;
+            }
+        }
+
+        close.addEventListener('click', hideAd);
+    });
     </script>
 </body>
 </html>
