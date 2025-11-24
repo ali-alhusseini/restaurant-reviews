@@ -117,10 +117,9 @@ nav ul {
     color: rgba(15, 23, 36, 0.12);
 }
 
-/* Globe/site icon used beside external website links */
 .site-icon {
-    width: 1em;
-    height: 1em;
+    width: 1.3em;
+    height: 1.3em;
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.35rem;
